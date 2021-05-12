@@ -1,0 +1,209 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2021-05-12T16:33:47.151Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3997900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConfigureSpringContext.SetupSpringContext()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "Title of your scenario",
+        "description": "",
+        "id": "title-of-your-feature;title-of-your-scenario",
+        "after": [
+          {
+            "output": [
+              " Tempo da Execução : 00:00:00 "
+            ],
+            "result": {
+              "duration": 8675900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ExampleBrowser_Steps.printTimeExecution()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "output": [
+              " Dados da Execução \n Data e hora : 2021-05-12_13:33:47",
+              "\n Running on Windows 10 *** by picaroon framework ***",
+              "\n Browser : chrome"
+            ],
+            "result": {
+              "duration": 6777500,
+              "status": "passed"
+            },
+            "before": [
+              {
+                "result": {
+                  "duration": 6565200,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Example_Steps.reportClear(Scenario)"
+                }
+              }
+            ],
+            "line": 8,
+            "name": "I want to write a step with precondition",
+            "match": {
+              "location": "Example_Steps.i_want_to_write_a_step_with_precondition()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 14176600,
+              "status": "passed"
+            },
+            "before": [
+              {
+                "result": {
+                  "duration": 72900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Example_Steps.reportClear(Scenario)"
+                }
+              }
+            ],
+            "line": 9,
+            "name": "some other precondition",
+            "match": {
+              "location": "Example_Steps.some_other_precondition()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 398800,
+              "status": "passed"
+            },
+            "before": [
+              {
+                "result": {
+                  "duration": 83600,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Example_Steps.reportClear(Scenario)"
+                }
+              }
+            ],
+            "line": 10,
+            "name": "I complete action",
+            "match": {
+              "location": "Example_Steps.i_complete_action()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 289600,
+              "status": "passed"
+            },
+            "before": [
+              {
+                "result": {
+                  "duration": 35700,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Example_Steps.reportClear(Scenario)"
+                }
+              }
+            ],
+            "line": 11,
+            "name": "some other action",
+            "match": {
+              "location": "Example_Steps.some_other_action()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 297000,
+              "status": "passed"
+            },
+            "before": [
+              {
+                "result": {
+                  "duration": 50700,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Example_Steps.reportClear(Scenario)"
+                }
+              }
+            ],
+            "line": 12,
+            "name": "I validate the outcomes",
+            "match": {
+              "location": "Example_Steps.i_validate_the_outcomes()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 271600,
+              "status": "passed"
+            },
+            "before": [
+              {
+                "result": {
+                  "duration": 27500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Example_Steps.reportClear(Scenario)"
+                }
+              }
+            ],
+            "line": 13,
+            "name": "check more outcomes",
+            "match": {
+              "location": "Example_Steps.check_more_outcomes()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag"
+          },
+          {
+            "name": "@tag1"
+          }
+        ]
+      }
+    ],
+    "name": "Title of your feature",
+    "description": "  I want to use this template for my feature file",
+    "id": "title-of-your-feature",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Exemple.feature",
+    "tags": [
+      {
+        "name": "@tag",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
