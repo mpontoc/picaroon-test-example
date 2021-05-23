@@ -1,17 +1,13 @@
 package com.example.demo;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Bean;
-import org.springframework.core.env.Environment;
 
 import br.com.mpontoc.picaroon.core.commands.ActionsCommands;
 import br.com.mpontoc.picaroon.core.utils.BaseTest;
 import br.com.mpontoc.picaroon.core.utils.Functions;
 import br.com.mpontoc.picaroon.core.utils.Log;
-import io.restassured.internal.TestSpecificationImpl;
 
 @SpringBootTest
 class PicarronTestProjectApplicationTests {
