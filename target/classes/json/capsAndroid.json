@@ -1,6 +1,6 @@
 [
 	{
-		"name": "emulator-5554",
+		"name": "CTappium",
 		"caps": {
 			"platformName": "Android",
 			"platformVersion": "8.0",
@@ -15,18 +15,20 @@
 		}
 	},
 	{
-		"name": "emulator-5555",
+		"name": "Calculator",
 		"caps": {
 			"platformName": "Android",
 			"platformVersion": "8.0",
 			"automationName": "uiautomator2",
-			"appPackage": "uiautomator2",
-			"appActivity": "uiautomator2",
+			"appName": "Calculator",
+			"appActivity": "com.android.calculator2",
+			"appPackage": "com.android.calculator2.Calculator",
 			"autoGrantPermissions": "true",
 			"noReset": "false",
-			"udid": "false",
-			"deviceName": "Emulator-5554"
+			"udid": "emulator-5554",
+			"deviceName": "emulator-5554"
 		}
 	}
+
 ]
 

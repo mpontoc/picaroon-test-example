@@ -42,7 +42,7 @@ public class Android_Runner extends BaseTest {
 		Prop.setPropAndSave("browserOrDevice", "mobile");
 		Mobile.setPlataforma("android");
 		Mobile.setCapsFileJosn("capsAndroid.json");
-		Mobile.setDeviceName("emulator-5554");
+		Mobile.setCapsNameDeviceOrApp("CTappium");
 		Functions.setPathReport("runner_Android");
 		Functions.setDescricaoReport("Test Android");
 		Functions.setUp();
