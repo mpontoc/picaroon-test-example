@@ -14,7 +14,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @CucumberOptions(
 		
-		tags = { " @browser " },
+		tags = { " @searchShop " },
 		features = "src/test/resources/features", // local onde estão as features
 		glue = { 
 				"com.example.demo.steps", // package onde estão os steps

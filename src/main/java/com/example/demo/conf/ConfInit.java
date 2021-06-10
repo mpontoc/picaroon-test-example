@@ -5,21 +5,10 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(
-		basePackages = { 
-				"com.example.demo.conf", 
-				"com.example.*"
-		} 
-		)
+@ComponentScan(basePackages = { "com.example.demo", "com.example.*", })
 //@PropertySource("application.properties")
-@EntityScan(
-		basePackages = {
-				"com.example.demo.conf", 
-				"com.example.*"
-		}
-		)
+@EntityScan(basePackages = { "com.example.demo", "com.example.*", })
 
 public class ConfInit {
-	
 
 }

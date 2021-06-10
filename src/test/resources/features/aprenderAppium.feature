@@ -11,7 +11,7 @@ Quando eu abro o app CT_Appium
 E entro no formulário
 Então preencho os dados 
 
-@validaFormulario 2
+@validaFormulario2
 Cenario: Consulta APK Aquino
 
 Dado que eu estou no device
