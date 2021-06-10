@@ -7,7 +7,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.3.4.RELEASE</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath>../picaroon-core/pom.xml</relativePath>
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>picarron-test-project</artifactId>
@@ -34,19 +34,10 @@
 		</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>${project.encondig}
 		</project.reporting.outputEncoding>
+				<junit>4.13</junit>
 	</properties>
 	<dependencies>
 		<!-- Spring Boot Framework -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-log4j2</artifactId>
@@ -66,16 +57,24 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-artemis</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-json</artifactId>
-		</dependency>
-
 		<!-- Cucumber -->
+
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit</artifactId>
@@ -90,6 +89,20 @@
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-spring</artifactId>
 			<version>${cucumber.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.zeroturnaround</groupId>
+			<artifactId>zt-zip</artifactId>
+			<version>1.14</version>
+			<type>jar</type>
+		</dependency>
+
+		<!--Junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit}</version><!--$NO-MVN-MAN-VER$ -->
 		</dependency>
 
 		<!-- Selenium API -->
@@ -159,10 +172,21 @@
 	</dependencies>
 
 	<build>
+		<finalName>automation-test</finalName>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M4</version><!--$NO-MVN-MAN-VER$ -->
+				<configuration>
+					<rerunFailingTestsCount>3</rerunFailingTestsCount>
+					<reuseForks>false</reuseForks>
+					<skipTests>false</skipTests>
+					<testFailureIgnore>false</testFailureIgnore>
+					<includes>
+						<include>**/*Runner.java</include>
+					</includes>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

@@ -1,4 +1,4 @@
-package com.example.demo.steps;
+package com.example.demo.dois.steps;
 
 import static br.com.mpontoc.picaroon.core.commands.ActionsCommands.waitExistClick;
 import static br.com.mpontoc.picaroon.core.commands.ActionsCommands.waitExistGetText;

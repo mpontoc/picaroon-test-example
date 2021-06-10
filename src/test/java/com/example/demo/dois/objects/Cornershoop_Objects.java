@@ -1,10 +1,10 @@
-package com.example.objects;
+package com.example.demo.dois.objects;
 
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("all")
 public class Cornershoop_Objects {
 	
 	//access

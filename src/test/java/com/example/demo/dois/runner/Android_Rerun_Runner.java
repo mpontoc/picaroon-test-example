@@ -1,4 +1,4 @@
-package com.example.demo.runner;
+package com.example.demo.dois.runner;
 
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;

@@ -1,9 +1,10 @@
-package com.example.demo.steps;
+package com.example.demo.dois.steps;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
-import com.example.objects.Cornershoop_Objects;
-import com.example.objects.Interface;
+import com.example.demo.dois.objects.Cornershoop_Objects;
+import com.example.demo.dois.objects.Interface;
 
 import br.com.mpontoc.picaroon.core.commands.ActionsCommands;
 import br.com.mpontoc.picaroon.core.utils.Functions;
@@ -39,7 +40,7 @@ public class SearchShop_Steps {
 	}
 	
 	@Autowired
-	Interface chanel;
+	public Cornershoop_Objects objects;
 //	Cornershoop_Objects objects = new Cornershoop_Objects();
 	@Given("I want to locate the shops nearby me")
 	public void i_want_to_locate_the_shops_nearby_me() {
@@ -53,9 +54,9 @@ public class SearchShop_Steps {
 	@When("I send my zip code {string}")
 	public void i_send_my_zip_code(String zipCode) {
 		
-		ActionsCommands.waitExistClick(chanel.objects.btCancel, 3, true);
-		ActionsCommands.waitExistSet(chanel.objects.zipCode, zipCode, 3, true);
-		ActionsCommands.waitExistClick(chanel.objects.btContinue, 3, true);
+		ActionsCommands.waitExistClick(objects.btCancel, 3, true);
+		ActionsCommands.waitExistSet(objects.zipCode, zipCode, 3, true);
+		ActionsCommands.waitExistClick(objects.btContinue, 3, true);
 
 	}
 

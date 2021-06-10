@@ -1,0 +1,10 @@
+com\example\demo\runner\IOS_Runner.class
+com\example\demo\runner\Browser_Runner.class
+com\example\demo\steps\Example_Steps.class
+com\example\objects\Interface.class
+com\example\demo\runner\Android_Rerun_Runner.class
+com\example\demo\steps\SearchShop_Steps.class
+com\example\demo\runner\Android_Runner.class
+com\example\demo\steps\MobileTests_Steps.class
+com\example\objects\Cornershoop_Objects.class
+com\example\demo\steps\ExampleBrowser_Steps.class
