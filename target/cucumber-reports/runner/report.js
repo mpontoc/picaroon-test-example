@@ -1,24 +1,63 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/aprenderAppium.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Browser.feature");
 formatter.feature({
-  "name": "Validar Fluxos e Elementos CT_Appium test",
+  "name": "Acessar site",
   "description": "",
   "keyword": "Funcionalidade",
   "tags": [
     {
-      "name": "@testAppium"
+      "name": "@browser"
+    }
+  ]
+});
+formatter.scenarioOutline({
+  "name": "Acessar site \u003csite\u003e",
+  "description": "",
+  "keyword": "Esquema do Cenario",
+  "tags": [
+    {
+      "name": "@browser1"
+    }
+  ]
+});
+formatter.step({
+  "name": "que eu acesse o site \"\u003csite\u003e\"",
+  "keyword": "Dado "
+});
+formatter.step({
+  "name": "serão apresentadas informações do dia",
+  "keyword": "Quando "
+});
+formatter.step({
+  "name": "estarei atualizado com o que está acontecendo no momento",
+  "keyword": "Então "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Exemplos",
+  "rows": [
+    {
+      "cells": [
+        "site"
+      ]
+    },
+    {
+      "cells": [
+        "http://www.uol.com.br"
+      ]
     }
   ]
 });
 formatter.scenario({
-  "name": "Consulta APK Aquino",
+  "name": "Acessar site http://www.uol.com.br",
   "description": "",
-  "keyword": "Cenario",
+  "keyword": "Esquema do Cenario",
   "tags": [
     {
-      "name": "@testAppium"
+      "name": "@browser"
     },
     {
-      "name": "@validaFormulario"
+      "name": "@browser1"
     }
   ]
 });
@@ -29,19 +68,16 @@ formatter.beforestep({
   "status": "passed"
 });
 formatter.step({
-  "name": "que eu estou no device",
+  "name": "que eu acesse o site \"http://www.uol.com.br\"",
   "keyword": "Dado "
 });
 formatter.match({
-  "location": "MobileTests_Steps.que_eu_estou_no_device()"
+  "location": "ExampleBrowser_Steps.que_eu_acesse_o_site(String)"
 });
-formatter.write(" Dados da Execução \n Data e hora : 2021-05-22_23:26:07");
-formatter.write("\n Running on Windows 10 *** by picaroon framework ***");
-formatter.write("\n Plataforma : android");
-formatter.write("\n Device : emulator-5554");
-formatter.write("\n UDID : emulator-5554");
-formatter.write("\n Descrição adicional : Test Android");
-formatter.write("Texto obtido [ \u0027Formulário\u0027 ]");
+formatter.write(" Execution Data \n Date and hour: 2021-06-23_13:38:34");
+formatter.write("\n Running on Mac OS X *** by picaroon framework ***");
+formatter.write("\n Browser : chrome");
+formatter.write("\n More data : Test Browser");
 formatter.result({
   "status": "passed"
 });
@@ -55,13 +91,13 @@ formatter.beforestep({
   "status": "passed"
 });
 formatter.step({
-  "name": "eu abro o app CT_Appium",
+  "name": "serão apresentadas informações do dia",
   "keyword": "Quando "
 });
 formatter.match({
-  "location": "MobileTests_Steps.eu_abro_o_app_CT_Appium()"
+  "location": "ExampleBrowser_Steps.serão_apresentadas_informações_do_dia()"
 });
-formatter.write("Ação obrigatória com o elemento \u0027//android.widget.FrameLayout\u0027 efetuada com sucesso");
+formatter.write("UOL - Seu universo online");
 formatter.result({
   "status": "passed"
 });
@@ -75,11 +111,11 @@ formatter.beforestep({
   "status": "passed"
 });
 formatter.step({
-  "name": "entro no formulário",
-  "keyword": "E "
+  "name": "estarei atualizado com o que está acontecendo no momento",
+  "keyword": "Então "
 });
 formatter.match({
-  "location": "MobileTests_Steps.entro_no_formulário()"
+  "location": "ExampleBrowser_Steps.estarei_atualizado_com_o_que_está_acontecendo_no_momento()"
 });
 formatter.result({
   "status": "passed"
@@ -90,37 +126,11 @@ formatter.write("\n");
 formatter.afterstep({
   "status": "passed"
 });
-formatter.beforestep({
-  "status": "passed"
-});
-formatter.step({
-  "name": "preencho os dados",
-  "keyword": "Então "
-});
-formatter.match({
-  "location": "MobileTests_Steps.preencho_os_dados()"
-});
-formatter.write("Ação obrigatória com o elemento \u0027Nome\u0027 efetuada com sucesso");
-formatter.write("Texto obtido [ \u0027Cleber\u0027 ]");
-formatter.write("Ação obrigatória com o elemento \u0027Cleber\u0027 efetuada com sucesso");
-formatter.write("Ação obrigatória com o elemento \u0027XBox One\u0027 efetuada com sucesso");
-formatter.write("Ação obrigatória com o elemento \u0027Nintendo Switch\u0027 efetuada com sucesso");
-formatter.write("Ação obrigatória com o elemento \u0027//android.widget.CheckBox\u0027 efetuada com sucesso");
-formatter.write("Ação obrigatória com o elemento \u0027//android.widget.Switch\u0027 efetuada com sucesso");
-formatter.result({
-  "status": "passed"
-});
-formatter.write("\n");
-formatter.embedding("image/png", "embedded3.png", null);
-formatter.write("\n");
-formatter.afterstep({
-  "status": "passed"
-});
-formatter.write(" Tempo da Execução : 00:00:17 ");
+formatter.write(" Time of execution : 00:00:15 ");
 formatter.after({
   "status": "passed"
 });
-formatter.write(" Tempo da Execução : 00:00:17 ");
+formatter.write(" Time of execution : 00:00:15 ");
 formatter.after({
   "status": "passed"
 });

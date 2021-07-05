@@ -37,7 +37,7 @@ public class Android_Rerun_Runner extends BaseTest {
 		Functions.apagaLog4j();
 		Prop.setPropAndSave("browserOrDevice", "mobile");
 		Mobile.setPlataforma("android");
-		Mobile.setCapsFileJosn("capsAndroid.json");
+		Mobile.setCapsFileJson("capsAndroid.json");
 		Mobile.setApp("CTAppium");
 		Mobile.setDeviceName("emulator-5554");
 		Functions.setPathReport("rerun_Android");

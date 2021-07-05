@@ -4,7 +4,6 @@ import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
 import br.com.mpontoc.picaroon.core.mobile.Mobile;
-import br.com.mpontoc.picaroon.core.mobile.Mobile;
 import br.com.mpontoc.picaroon.core.utils.BaseTest;
 import br.com.mpontoc.picaroon.core.utils.Functions;
 import br.com.mpontoc.picaroon.core.utils.Prop;
@@ -41,7 +40,7 @@ public class Android_Runner extends BaseTest {
 		Functions.setAppRunner(false);
 		Prop.setPropAndSave("browserOrDevice", "mobile");
 		Mobile.setPlataforma("android");
-		Mobile.setCapsFileJosn("capsAndroid.json");
+		Mobile.setCapsFileJson("capsAndroid.json");
 		Mobile.setCapsNameDeviceOrApp("CTappium");
 		Functions.setPathReport("runner_Android");
 		Functions.setDescricaoReport("Test Android");

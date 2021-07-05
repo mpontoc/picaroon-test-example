@@ -29,7 +29,7 @@ class PicarronTestProjectApplicationTests {
 		}
 		Log.log(prop);
 		ActionsCommands.driver.get("https://www.uol.com.br");
-		BaseTest.finalizaExecucao();
+		BaseTest.endExection();
 		
 	}
 
