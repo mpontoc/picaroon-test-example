@@ -11,8 +11,7 @@
 			"autoGrantPermissions": "true",
 			"noReset": "false",
 			"udid": "emulator-5554",
-			"deviceName": "emulator-5554",
-			"app": "/Users/mpontoc/Documents/sts/picaroon-test-example/src/test/resources/apk/original.apk"
+			"deviceName": "emulator-5554"
 		}
 	},
 	{

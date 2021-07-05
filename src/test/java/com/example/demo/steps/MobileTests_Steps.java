@@ -47,8 +47,8 @@ public class MobileTests_Steps {
     @Dado("^que eu estou no device")
     public void que_eu_estou_no_device() throws Throwable {
     	ActionsCommands.newApp();  	
-    	Functions.printInfoExec();
     	waitSeconds(2);
+    	Functions.printInfoExec();
 
         validaMenu = ActionsCommands.waitExistGetText("Formulário", 3);
         System.out.println("Texto obtido nos steps " + validaMenu);
