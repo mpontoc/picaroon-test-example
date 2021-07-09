@@ -34,7 +34,7 @@ public class Browser_Runner extends BaseTest {
 	@BeforeClass
 	
 	public static void setUp() {
-		Functions.apagaLog4j();
+//		Functions.apagaLog4j();
 		Prop.setPropAndSave("browserOrDevice", "chrome");
 		Functions.setPathReport("runner");
 		Functions.setDescricaoReport("Test Browser");
