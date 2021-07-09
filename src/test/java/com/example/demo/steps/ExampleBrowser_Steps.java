@@ -16,6 +16,7 @@ import io.cucumber.java.pt.Quando;
 
 public class ExampleBrowser_Steps {
 
+/*
 	@BeforeStep("@browser")
 	public void reportClear(Scenario scenario) {
 		ActionsCommands.isFirstRun = true;
@@ -34,7 +35,7 @@ public class ExampleBrowser_Steps {
 		}
 		Functions.printTimeExecution();
 	}
-
+*/
 	@Dado("que eu acesse o site {string}")
 	public void que_eu_acesse_o_site(String site) {
 		

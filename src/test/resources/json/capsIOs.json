@@ -1,17 +1,33 @@
 [
 	{
-		"employee": {
-			"firstName": "Lokesh",
-			"lastName": "Gupta",
-			"website": "howtodoinjava.com"
+		"name": "Integration",
+		"caps": {
+			"platformName": "iOS",
+			"platformVersion": "14.4",
+			"automationName": "XCUITest",
+			"appName": "IntegrationApp",
+			"autoGrantPermissions": "true",
+			"noReset": "true",
+			"udid": "7ECFE099-E13B-4D7D-9021-931AEA0E9762",
+			"deviceName": "iPhone 12",
+			"app": "/Users/mpontoc/Desktop/app/Landmarks.app"
+			
 		}
 	},
 	{
-		"employee": {
-			"firstName": "Brian",
-			"lastName": "Schultz",
-			"website": "example.com"
+		"name": "Calculator",
+		"caps": {
+			"platformName": "Android",
+			"platformVersion": "8.0",
+			"automationName": "uiautomator2",
+			"appName": "Calculator",
+			"appActivity": "com.spencerstudios.screentest.MainActivity",
+			"appPackage": "com.spencerstudios.screentest",
+			"autoGrantPermissions": "true",
+			"noReset": "false",
+			"udid": "emulator-5554",
+			"deviceName": "emulator-5554"
 		}
 	}
-]
 
+]

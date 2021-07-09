@@ -75,6 +75,12 @@
 			<artifactId>spring-boot-starter-json</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+
 		<!-- Cucumber -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
@@ -154,7 +160,7 @@
 		<dependency>
 			<groupId>io.github.mpontoc</groupId>
 			<artifactId>picaroon-core</artifactId>
-			<version>2.0.1</version>
+			<version>2.0.2</version>
 		</dependency>
 	</dependencies>
 

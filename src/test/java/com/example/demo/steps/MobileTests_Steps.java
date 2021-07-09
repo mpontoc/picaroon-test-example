@@ -9,6 +9,7 @@ import org.junit.Assert;
 
 import br.com.mpontoc.picaroon.core.commands.ActionsCommands;
 import br.com.mpontoc.picaroon.core.commands.MobileCommands;
+import br.com.mpontoc.picaroon.core.driverFactory.MobileDriverInit;
 import br.com.mpontoc.picaroon.core.mobile.Mobile;
 import br.com.mpontoc.picaroon.core.utils.Functions;
 import br.com.mpontoc.picaroon.core.utils.Prop;
@@ -50,6 +51,11 @@ public class MobileTests_Steps {
     	waitSeconds(2);
     	Functions.printInfoExec();
 
+    	ActionsCommands.waitExistClick("//*[@text='Multi Touch Test']", 3);
+    	waitSeconds(2);
+    	
+    	MobileCommands.scrollUntilElement(validaMenu);
+    	
         validaMenu = ActionsCommands.waitExistGetText("Formulário", 3);
         System.out.println("Texto obtido nos steps " + validaMenu);
         ActionsCommands.waitExistClick("//*[@text='Formulário']", 3);

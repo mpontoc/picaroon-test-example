@@ -37,11 +37,11 @@ public class Android_Runner extends BaseTest {
 	
 	public static void setUp() {
 		Functions.apagaLog4j();
-		Functions.setAppRunner(false);
+		Functions.setAppRunner(true);
 		Prop.setPropAndSave("browserOrDevice", "mobile");
 		Mobile.setPlataforma("android");
 		Mobile.setCapsFileJson("capsAndroid.json");
-		Mobile.setCapsNameDeviceOrApp("CTappium");
+		Mobile.setCapsNameDeviceOrApp("Calculator");
 		Functions.setPathReport("runner_Android");
 		Functions.setDescricaoReport("Test Android");
 		Functions.setUp();
