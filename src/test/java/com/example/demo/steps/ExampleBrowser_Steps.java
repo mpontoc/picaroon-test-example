@@ -39,7 +39,7 @@ public class ExampleBrowser_Steps {
 	@Dado("que eu acesse o site {string}")
 	public void que_eu_acesse_o_site(String site) {
 		
-		Functions.printInfoExec();
+	//	Functions.printInfoExec();
 		
 		driver.get(site);
 		

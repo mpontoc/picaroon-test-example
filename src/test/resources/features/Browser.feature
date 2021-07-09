@@ -11,3 +11,4 @@ Funcionalidade: Acessar site
     Exemplos: 
       | site                  |
       | http://www.uol.com.br |
+      | http://www.ig.com.br  |
