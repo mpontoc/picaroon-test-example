@@ -15,7 +15,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @CucumberOptions(
 		
-		tags = { " @testAppium " },
+		tags = { " @ios " },
 		features = "src/test/resources/features", // local onde estão as features
 		glue = { 
 				"com.example.demo.steps", // package onde estão os steps
@@ -23,7 +23,7 @@ import io.cucumber.junit.CucumberOptions;
 		}, 
 		plugin = { "pretty", // imprime a descrição da feature
 				 "json:target/reports/results.json",
-				 "html:target/cucumber-reports/runner_Android",
+				 "html:target/cucumber-reports/runner_ios",
 				 "rerun:target/rerun_Android.txt"
 				}, 
 		monochrome = true, // deixa o console só com fonte cor preta
@@ -36,14 +36,13 @@ public class IOS_Runner extends BaseTest {
 	@BeforeClass
 	
 	public static void setUp() {
-		Functions.apagaLog4j();
 		Functions.setAppRunner(true);
 		Prop.setPropAndSave("browserOrDevice", "mobile");
 		Mobile.setPlataforma("ios");
 		Mobile.setCapsFileJson("capsIOS.json");
 		Mobile.setCapsNameDeviceOrApp("Integration");
-		Functions.setPathReport("runner_Android");
-		Functions.setDescricaoReport("Test Android");
+		Functions.setPathReport("runner_ios");
+		Functions.setDescricaoReport("Test IOS");
 		Functions.setUp();
 	}
 
