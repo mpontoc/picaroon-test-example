@@ -8,15 +8,7 @@ import static br.com.mpontoc.picaroon.core.commands.ActionsCommands.waitSeconds;
 import org.junit.Assert;
 
 import br.com.mpontoc.picaroon.core.commands.ActionsCommands;
-import br.com.mpontoc.picaroon.core.commands.MobileCommands;
 import br.com.mpontoc.picaroon.core.driverFactory.MobileDriverInit;
-import br.com.mpontoc.picaroon.core.mobile.Mobile;
-import br.com.mpontoc.picaroon.core.utils.Functions;
-import br.com.mpontoc.picaroon.core.utils.Prop;
-import io.cucumber.core.api.Scenario;
-import io.cucumber.java.After;
-import io.cucumber.java.AfterStep;
-import io.cucumber.java.BeforeStep;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
@@ -48,9 +40,11 @@ public class MobileTests_Steps {
 
     @Dado("^que eu estou no device")
     public void que_eu_estou_no_device() throws Throwable {
-//    	ActionsCommands.newApp();  	
     	waitSeconds(2);
 //    	Functions.printInfoExec();
+    	
+//    	Mobile.setCapsNameDeviceOrApp("CT_Appium");
+//    	ActionsCommands.newApp();  	
 
 //    	ActionsCommands.waitExistClick("//*[@text='Multi Touch Test']", 3);
     	

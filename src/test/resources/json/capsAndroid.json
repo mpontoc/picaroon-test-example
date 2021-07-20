@@ -29,7 +29,7 @@
 		}
 	},
 	{
-		"name": "emulator-5554",
+		"name": "CT_Appium",
 		"caps": {
 			"platformName": "Android",
 			"platformVersion": "8.0",

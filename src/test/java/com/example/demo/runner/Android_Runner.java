@@ -10,42 +10,38 @@ import br.com.mpontoc.picaroon.core.utils.Prop;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
-
 @RunWith(Cucumber.class)
 
 @CucumberOptions(
-		
-		tags = { " @testAppium " },
-		features = "src/test/resources/features", // local onde estão as features
-		glue = { 
-				"com.example.demo.steps", // package onde estão os steps
+
+		tags = { " @testAppium " }, features = "src/test/resources/features", // local onde estão as features
+		glue = { "com.example.demo.steps", // package onde estão os steps
 				"com.example.demo.conf" // chamada do spring
-		}, 
-		plugin = { "pretty", // imprime a descrição da feature
-				 "json:target/reports/results.json",
-				 "html:target/cucumber-reports/runner_Android",
-				 "rerun:target/rerun_Android.txt"
-				}, 
-		monochrome = true, // deixa o console só com fonte cor preta
+		}, plugin = { "pretty", // imprime a descrição da feature
+				"json:target/reports/results.json", "html:target/cucumber-reports/runner_Android",
+				"rerun:target/rerun_Android.txt" }, monochrome = true, // deixa o console só com fonte cor preta
 		dryRun = false, // ao rodar quando true percorre toda automação verificando se faltam passos
 		strict = true // quando está true ele falha o cenario inteiro caso estja faltando algum step
 )
 
 public class Android_Runner extends BaseTest {
-	
+
+	/*
+	 * case start the app by runner may set app on Mobile.setCapsNameDeviceOrApp
+	 * example -->> Mobile.setCapsNameDeviceOrApp("CT_Appium")
+	 */
+
 	@BeforeClass
-	
 	public static void setUp() {
 		Functions.apagaLog4j();
-		Functions.setAppRunner(false);
+		Functions.setAppRunner(true);
 		Prop.setPropAndSave("browserOrDevice", "mobile");
 		Mobile.setPlataforma("android");
 		Mobile.setCapsFileJson("capsAndroid.json");
-		Mobile.setCapsNameDeviceOrApp("emulator-5554");
+		Mobile.setCapsNameDeviceOrApp("CT_Appium");;
 		Functions.setPathReport("runner_Android");
 		Functions.setDescricaoReport("Test Android");
 		Functions.setUp();
 	}
-
 
 }

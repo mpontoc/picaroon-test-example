@@ -16,35 +16,42 @@ public class Hooks {
 
 	@Before
 
-	public void setAppMobile() {
+	public void setAppMobile(Scenario scenario) {
+
+		ActionsCommands.setScenario(scenario);
 
 		if (Prop.getProp("browserOrDevice").contains("mobile")) {
-			
-			if(MobileDriverInit.driverMobile != null && Functions.getAppRunner() == true) {
+
+			if (MobileDriverInit.driverMobile != null && Functions.getAppRunner() == true) {
 				MobileDriverInit.driverMobile.resetApp();
 			}
-			ActionsCommands.newApp();
+
+			if (Functions.getAppRunner() == true) {
+				ActionsCommands.newApp();
+			}
 		}
 
 	}
 
 	@BeforeStep
-	public void reportClear(Scenario scenario) {
+	public void reportBefore(Scenario scenario) {
+
 		ActionsCommands.setScenario(scenario);
 		ActionsCommands.isFirstRun = true;
-		
-//		if (Prop.getProp("browserOrDevice").contains("mobile") && !Functions.getAppRunner() == true) {
-//			isPrintedInfo = true;
-//		}
-		
-		if (isPrintedInfo == false) {
+
+		if (Prop.getProp("browserOrDevice").contains("mobile")) {
+			if (isPrintedInfo == false && Functions.getAppRunner() == true) {
+				Functions.printInfoExec();
+				isPrintedInfo = true;
+			}
+		} else if (isPrintedInfo == false) {
 			Functions.printInfoExec();
 			isPrintedInfo = true;
 		}
 	}
 
 	@AfterStep
-	public void report(Scenario scenario) {
+	public void reportAfter(Scenario scenario) {
 		ActionsCommands.printScreenAfterStep(scenario);
 	}
 
@@ -54,6 +61,9 @@ public class Hooks {
 			ActionsCommands.printScreen();
 		}
 		Functions.printTimeExecution();
+		Functions.setHoraFinalTotal(Functions.retornaData().substring(11));
+		ActionsCommands.cucumberWriteReport("Total time execution until 'moment/final exection' "
+				+ Functions.substractHours(Functions.getHoraInicialTotal(), Functions.getHoraFinalTotal()));
 	}
 
 }
