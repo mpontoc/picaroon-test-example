@@ -3,13 +3,7 @@ package com.example.demo.steps;
 import static br.com.mpontoc.picaroon.core.commands.ActionsCommands.driver;
 
 import br.com.mpontoc.picaroon.core.commands.ActionsCommands;
-import br.com.mpontoc.picaroon.core.utils.Functions;
 import br.com.mpontoc.picaroon.core.utils.Log;
-import br.com.mpontoc.picaroon.core.utils.Prop;
-import io.cucumber.core.api.Scenario;
-import io.cucumber.java.After;
-import io.cucumber.java.AfterStep;
-import io.cucumber.java.BeforeStep;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;

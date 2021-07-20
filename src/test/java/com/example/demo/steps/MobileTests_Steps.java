@@ -23,6 +23,7 @@ import io.cucumber.java.pt.Quando;
 
 public class MobileTests_Steps {
 
+/*	
 	@BeforeStep("@testAppium")
 	public void reportClear(Scenario scenario) {
 		ActionsCommands.isFirstRun = true;
@@ -41,20 +42,21 @@ public class MobileTests_Steps {
 		}
 		Functions.printTimeExecution();
 	}
-
+*/
     private String validaMenu;
     private String validaNome;
 
     @Dado("^que eu estou no device")
     public void que_eu_estou_no_device() throws Throwable {
-    	ActionsCommands.newApp();  	
+//    	ActionsCommands.newApp();  	
     	waitSeconds(2);
-    	Functions.printInfoExec();
+//    	Functions.printInfoExec();
 
-    	ActionsCommands.waitExistClick("//*[@text='Multi Touch Test']", 3);
-    	waitSeconds(2);
+//    	ActionsCommands.waitExistClick("//*[@text='Multi Touch Test']", 3);
     	
-    	MobileCommands.scrollUntilElement(validaMenu);
+    	MobileDriverInit.driverMobile.getCapabilities().getCapability("appName");
+    	
+//    	MobileCommands.scrollUntilElement(validaMenu);
     	
         validaMenu = ActionsCommands.waitExistGetText("Formulário", 3);
         System.out.println("Texto obtido nos steps " + validaMenu);

@@ -27,7 +27,21 @@
 			"udid": "emulator-5554",
 			"deviceName": "emulator-5554"
 		}
+	},
+	{
+		"name": "emulator-5554",
+		"caps": {
+			"platformName": "Android",
+			"platformVersion": "8.0",
+			"automationName": "uiautomator2",
+			"appName": "CTappium",
+			"appActivity": "com.ctappium.MainActivity",
+			"appPackage": "com.ctappium",
+			"autoGrantPermissions": "true",
+			"noReset": "false",
+			"udid": "emulator-5554",
+			"deviceName": "emulator-5554"
+		}
 	}
-
 ]
 

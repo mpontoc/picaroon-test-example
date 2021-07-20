@@ -33,8 +33,8 @@ class PicarronTestProjectApplicationTests {
 		Log.log(prop);
 //		ActionsCommands.driver.get("https://www.uol.com.br");
 		
-		user.setName("Teste");	
-		System.out.println(user.getName());
+//		user.setName("Teste");	
+//		System.out.println(user.getName());
 		
 	}
 
