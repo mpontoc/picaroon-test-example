@@ -14,7 +14,7 @@ public class IOS_MobileTests_Steps {
 	@Entao("valido o texto")
 	public void valido_o_texto() {
 
-		ActionsCommands.waitExistGetText("MpontoC", 3);
+		ActionsCommands.waitExistGetText("MpontoCfff", 3, true);
 
 	}
 
