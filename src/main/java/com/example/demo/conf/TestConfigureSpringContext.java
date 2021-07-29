@@ -3,11 +3,10 @@ package com.example.demo.conf;
 import org.springframework.boot.test.context.SpringBootContextLoader;
 import org.springframework.test.context.ContextConfiguration;
 
-import br.com.mpontoc.picaroon.core.conf.ConfInit;
 import io.cucumber.java.Before;
 
-@ContextConfiguration(classes = ConfInit.class, loader = SpringBootContextLoader.class)
-public class ConfigureSpringContext {
+@ContextConfiguration(classes = TestConfInitTest.class, loader = SpringBootContextLoader.class)
+public class TestConfigureSpringContext {
 	@Before
 	public void SetupSpringContext() {
 		
