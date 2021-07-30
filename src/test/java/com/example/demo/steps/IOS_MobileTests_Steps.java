@@ -7,10 +7,8 @@ import com.example.demo.User;
 
 import br.com.mpontoc.picaroon.core.commands.ActionsCommands;
 import br.com.mpontoc.picaroon.core.utils.Log;
-import io.cucumber.core.gherkin.Scenario;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
-import io.cucumber.plugin.event.Result;
 
 public class IOS_MobileTests_Steps {
 	

@@ -7,6 +7,7 @@ import io.cucumber.java.Before;
 
 @ContextConfiguration(classes = TestConfInitTest.class, loader = SpringBootContextLoader.class)
 public class TestConfigureSpringContext {
+
 	@Before
 	public void SetupSpringContext() {
 		
