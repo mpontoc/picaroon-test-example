@@ -5,8 +5,9 @@ import org.springframework.test.context.ContextConfiguration;
 
 import io.cucumber.java.Before;
 
-@ContextConfiguration(classes = ConfInitTest.class, loader = SpringBootContextLoader.class)
-public class ConfigureSpringContext {
+@ContextConfiguration(classes = TestConfInitTest.class, loader = SpringBootContextLoader.class)
+public class TestConfigureSpringContext {
+
 	@Before
 	public void SetupSpringContext() {
 		

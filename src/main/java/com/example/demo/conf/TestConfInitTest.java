@@ -19,7 +19,8 @@ import org.springframework.context.annotation.Configuration;
 		}
 		)
 
-public class ConfInitTest {
+public class TestConfInitTest {
+
 	
 
 }
