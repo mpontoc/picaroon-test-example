@@ -182,7 +182,7 @@
 					<skipTests>false</skipTests>
 					<testFailureIgnore>false</testFailureIgnore>
 					<includes>
-						<include>**/IOS_Runner.java</include>
+						<include>**/*Runner.java</include>
 					</includes>
 				</configuration>
 			</plugin>
