@@ -1,6 +1,6 @@
 package com.example.demo.steps;
 
-import static br.com.mpontoc.picaroon.core.commands.ActionsCommands.driver;
+import static br.com.mpontoc.picaroon.core.drivers.DriverFactory.driver;
 
 import br.com.mpontoc.picaroon.core.commands.ActionsCommands;
 import br.com.mpontoc.picaroon.core.utils.Log;

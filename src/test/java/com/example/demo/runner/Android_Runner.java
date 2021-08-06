@@ -41,7 +41,7 @@ public class Android_Runner extends BaseTest {
 		Mobile.setCapsNameDeviceOrApp("CT_Appium");;
 		Functions.setPathReport("runner_Android");
 		Functions.setDescricaoReport("Test Android");
-		Functions.setUp();
+		Functions.setupExecution();
 	}
 
 }

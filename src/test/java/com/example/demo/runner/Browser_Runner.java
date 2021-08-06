@@ -37,7 +37,7 @@ public class Browser_Runner extends BaseTest {
 		Prop.setPropAndSave("browserOrDevice", "chrome");
 		Functions.setPathReport("runner");
 		Functions.setDescricaoReport("Test Browser");
-		Functions.setUp();
+		Functions.setupExecution();
 		
 	}
 

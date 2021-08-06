@@ -21,7 +21,7 @@ class PicarronTestProjectApplicationTests {
 	void contextLoads() {
 		
 		Functions.setPathReport("testPics");
-		Functions.setUp();
+		Functions.setupExecution();
 		
 		try {
 			System.out.println(prop);

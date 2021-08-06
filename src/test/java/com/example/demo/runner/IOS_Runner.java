@@ -36,14 +36,14 @@ public class IOS_Runner extends BaseTest {
 	@BeforeClass
 	
 	public static void setUp() {
-		Functions.setAppRunner(true);
+		Functions.setAppRunner(false);
 		Prop.setPropAndSave("browserOrDevice", "mobile");
 		Mobile.setPlataforma("ios");
 		Mobile.setCapsFileJson("capsIOS.json");
 		Mobile.setCapsNameDeviceOrApp("Integration");
 		Functions.setPathReport("runner_ios");
 		Functions.setDescricaoReport("Test IOS");
-		Functions.setUp();
+		Functions.setupExecution();
 	}
 
 

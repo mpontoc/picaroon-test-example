@@ -8,7 +8,7 @@ import static br.com.mpontoc.picaroon.core.commands.ActionsCommands.waitSeconds;
 import org.junit.Assert;
 
 import br.com.mpontoc.picaroon.core.commands.ActionsCommands;
-import br.com.mpontoc.picaroon.core.driverFactory.MobileDriverInit;
+import br.com.mpontoc.picaroon.core.drivers.MobileDriverInit;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;

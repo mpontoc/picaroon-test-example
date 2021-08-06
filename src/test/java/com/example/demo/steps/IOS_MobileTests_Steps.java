@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import com.example.demo.User;
 
 import br.com.mpontoc.picaroon.core.commands.ActionsCommands;
+import br.com.mpontoc.picaroon.core.drivers.DriverFactory;
 import br.com.mpontoc.picaroon.core.utils.Log;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
@@ -27,11 +28,16 @@ public class IOS_MobileTests_Steps {
 		user.setName("Teste");	
 		System.out.println(user.getName());
 		
+		DriverFactory.newApp();		
 		
 	}
 
 	@Entao("valido o texto")
 	public void valido_o_texto() {
+		
+		String[] testPosicao = { "android" , "ios" };
+		
+		ActionsCommands.waitExistClick( testPosicao, 3);
 
 		ActionsCommands.waitExistGetText("MpontoCfff", 3 , true);
 
