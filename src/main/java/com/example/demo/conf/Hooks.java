@@ -34,7 +34,7 @@ public class Hooks {
 	}
 
 	@BeforeStep
-	public void reportBefore(Scenario scenario) {
+	public void reportBeforeStep(Scenario scenario) {
 
 		ActionsCommands.setScenario(scenario);
 		ActionsCommands.isFirstRun = true;
@@ -51,8 +51,10 @@ public class Hooks {
 	}
 
 	@AfterStep
-	public void reportAfter(Scenario scenario) {
-		ActionsCommands.printScreenAfterStep(scenario);
+	public void reportAfterStep(Scenario scenario) {
+		if(DriverFactory.driver != null) {
+			ActionsCommands.printScreenAfterStep(scenario);
+		}
 	}
 
 	@After
