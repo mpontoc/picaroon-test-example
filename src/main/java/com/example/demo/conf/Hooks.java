@@ -2,7 +2,6 @@ package com.example.demo.conf;
 
 import br.com.mpontoc.picaroon.core.commands.ActionsCommands;
 import br.com.mpontoc.picaroon.core.drivers.DriverFactory;
-import br.com.mpontoc.picaroon.core.drivers.MobileDriverInit;
 import br.com.mpontoc.picaroon.core.utils.Functions;
 import br.com.mpontoc.picaroon.core.utils.Prop;
 import io.cucumber.java.After;
@@ -22,14 +21,10 @@ public class Hooks {
 
 		if (Prop.getProp("browserOrDevice").toLowerCase().contains("mobile")) {
 
-			if (MobileDriverInit.driverMobile != null && Functions.getAppRunner() == true) {
-				MobileDriverInit.driverMobile.resetApp();
-			}
-
 			if (Functions.getAppRunner() == true) {
 				DriverFactory.newApp();
 			}
-		}
+	}
 
 	}
 
@@ -56,6 +51,7 @@ public class Hooks {
 			ActionsCommands.printScreenAfterStep(scenario);
 		}
 	}
+
 
 	@After
 	public static void printTimeExecution() {

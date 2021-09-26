@@ -8,24 +8,13 @@ import static br.com.mpontoc.picaroon.core.commands.ActionsCommands.waitSeconds;
 import org.junit.Assert;
 
 import br.com.mpontoc.picaroon.core.commands.ActionsCommands;
-import br.com.mpontoc.picaroon.core.drivers.MobileDriverInit;
+import br.com.mpontoc.picaroon.core.commands.MobileCommands;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 
 public class MobileTests_Steps {
 
-	/*
-	 * @BeforeStep("@testAppium") public void reportClear(Scenario scenario) {
-	 * ActionsCommands.isFirstRun = true; ActionsCommands.setScenario(scenario); }
-	 * 
-	 * @AfterStep("@testAppium") public void report(Scenario scenario) {
-	 * ActionsCommands.printScreenAfterStep(scenario); }
-	 * 
-	 * @After public static void printTimeExecution() { if
-	 * (Prop.getProp("printAfterSteps").equals("false")) {
-	 * ActionsCommands.printScreen(); } Functions.printTimeExecution(); }
-	 */
 	private String validaMenu;
 	private String validaNome;
 
@@ -36,10 +25,10 @@ public class MobileTests_Steps {
 
 //    	Mobile.setCapsNameDeviceOrApp("CT_Appium");
 //    	ActionsCommands.newApp();  	
-
+//		MobileCommands.pressKeyAndroid("home");
 //    	ActionsCommands.waitExistClick("//*[@text='Multi Touch Test']", 3);
 
-		MobileDriverInit.driverMobile.getCapabilities().getCapability("appName");
+//		MobileDriverInit.driverMobile.getCapabilities().getCapability("appName");
 
 //    	MobileCommands.scrollUntilElement(validaMenu);
 

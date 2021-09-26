@@ -3,7 +3,7 @@
 
 Funcionalidade: Validar Fluxos e Elementos CT_Appium test
 
-@validaFormulario
+@validaFormulario @android
 Cenario: Consulta APK Aquino
 
 Dado que eu estou no device
@@ -11,7 +11,7 @@ Quando eu abro o app CT_Appium
 E entro no formulário
 Então preencho os dados 
 
-@validaFormulario 2
+@validaFormulario @android
 Cenario: Consulta APK Aquino
 
 Dado que eu estou no device
