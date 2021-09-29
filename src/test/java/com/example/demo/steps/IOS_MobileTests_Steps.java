@@ -8,7 +8,7 @@ import com.example.demo.User;
 import br.com.mpontoc.picaroon.core.commands.ActionsCommands;
 import br.com.mpontoc.picaroon.core.drivers.DriverFactory;
 import br.com.mpontoc.picaroon.core.drivers.SetupDriver;
-import br.com.mpontoc.picaroon.core.drivers.impl.IOSDriverImp;
+import br.com.mpontoc.picaroon.core.drivers.impl.IOSDriverImpl;
 import br.com.mpontoc.picaroon.core.utils.Log;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
@@ -43,7 +43,7 @@ public class IOS_MobileTests_Steps {
 
 		ActionsCommands.waitExistGetText("MpontoC", 3 , true);
 		
-		IOSDriverImp.iosDriver.getKeyboard();
+		IOSDriverImpl.iosDriver.getKeyboard();
 
 	}
 
