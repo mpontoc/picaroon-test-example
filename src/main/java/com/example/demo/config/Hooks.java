@@ -22,12 +22,6 @@ public class Hooks {
 			Functions.printInfoExec();
 		}
 
-//		if (Prop.getProp("browserOrMobile").toLowerCase().contains("mobile")) {
-//
-//			if (Functions.getAppRunner() == true) {
-//				DriverFactory.newApp();
-//			}
-//		}
 	}
 
 	@BeforeStep

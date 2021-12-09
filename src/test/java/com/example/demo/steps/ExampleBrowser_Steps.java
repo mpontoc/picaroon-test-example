@@ -2,6 +2,7 @@ package com.example.demo.steps;
 
 import static io.github.mpontoc.picaroon.core.drivers.DriverFactory.driver;
 
+import io.github.mpontoc.picaroon.core.commands.ActionsCommands;
 import io.github.mpontoc.picaroon.core.utils.Log;
 import io.github.mpontoc.picaroon.core.utils.Report;
 import io.cucumber.java.pt.Dado;
@@ -37,13 +38,21 @@ public class ExampleBrowser_Steps {
 		
 		driver.get(site);
 		
+		Log.log("\n Ex: \n" + "lib/webdriver/linux/chromedriver for linux \n or \n" + "lib/webdriver/linux/chromedriver.exe for windows" );
+		
 	}
 
 	@Quando("serão apresentadas informações do dia")
 	public void serão_apresentadas_informações_do_dia() {
 		
+		
 		Report.printReportSlyled(driver.getTitle());
 		
+		String[] linkEsport = { "Esporte" , "logEsporte" };
+		
+		ActionsCommands.waitExistClick(linkEsport, 3);
+		
+		ActionsCommands.waitSeconds(3);
 	}
 
 	@Então("estarei atualizado com o que está acontecendo no momento")
