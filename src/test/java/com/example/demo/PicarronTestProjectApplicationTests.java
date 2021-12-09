@@ -5,8 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import br.com.mpontoc.picaroon.core.utils.Functions;
-import br.com.mpontoc.picaroon.core.utils.Log;
+import io.github.mpontoc.picaroon.core.utils.Functions;
+import io.github.mpontoc.picaroon.core.utils.Log;
 
 @SpringBootTest
 class PicarronTestProjectApplicationTests {

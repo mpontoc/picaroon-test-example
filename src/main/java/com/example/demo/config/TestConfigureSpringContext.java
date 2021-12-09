@@ -1,4 +1,4 @@
-package com.example.demo.conf;
+package com.example.demo.config;
 
 import org.springframework.boot.test.context.SpringBootContextLoader;
 import org.springframework.test.context.ContextConfiguration;
@@ -7,7 +7,7 @@ import io.cucumber.java.Before;
 import io.cucumber.spring.CucumberContextConfiguration;
 
 @CucumberContextConfiguration
-@ContextConfiguration(classes = TestConfInitTest.class, loader = SpringBootContextLoader.class)
+@ContextConfiguration(classes = TestConfigInitTest.class, loader = SpringBootContextLoader.class)
 public class TestConfigureSpringContext {
 
 	@Before

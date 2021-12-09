@@ -3,9 +3,9 @@ package com.example.demo.runner;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
-import br.com.mpontoc.picaroon.core.utils.BaseTest;
-import br.com.mpontoc.picaroon.core.utils.Functions;
-import br.com.mpontoc.picaroon.core.utils.Prop;
+import io.github.mpontoc.picaroon.core.utils.BaseTest;
+import io.github.mpontoc.picaroon.core.utils.Functions;
+import io.github.mpontoc.picaroon.core.utils.Prop;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
@@ -18,7 +18,7 @@ import io.cucumber.junit.CucumberOptions;
 		features = "src/test/resources/features", // local onde estão as features
 		glue = { 
 				"com.example.demo.steps", // package onde estão os steps
-				"com.example.demo.conf" // chamada do spring
+				"com.example.demo.config" // chamada do spring
 		}, 
 		plugin = { "pretty", // imprime a descrição da feature
 				 "json:target/reports/results.json",
@@ -34,7 +34,7 @@ public class Browser_Runner extends BaseTest {
 	@BeforeClass
 	
 	public static void setUp() {
-		Prop.setPropAndSave("browserOrDevice", "chrome");
+		Prop.setPropAndSave("browserOrMobile", "chrome");
 		Functions.setPathReport("runner");
 		Functions.setDescricaoReport("Test Browser");
 		Functions.setupExecution();

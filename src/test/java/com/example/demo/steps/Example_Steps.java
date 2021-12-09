@@ -1,9 +1,13 @@
 package com.example.demo.steps;
 
-import br.com.mpontoc.picaroon.core.commands.ActionsCommands;
-import br.com.mpontoc.picaroon.core.utils.Functions;
-import io.cucumber.java.Scenario;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import io.github.mpontoc.picaroon.core.commands.ActionsCommands;
+import io.github.mpontoc.picaroon.core.utils.Functions;
 import io.cucumber.java.BeforeStep;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -21,6 +25,48 @@ public class Example_Steps {
 		// Write code here that turns the phrase above into concrete actions
 		System.out.println("test1");
 		Functions.printInfoExec();
+		
+		String response = "{\n"
+				+ "   \"links\":[\n"
+				+ "      {\n"
+				+ "         \"id\":28,\n"
+				+ "         \"Title\":\"Sweden\"\n"
+				+ "      },\n"
+				+ "      {\n"
+				+ "         \"id\":56,\n"
+				+ "         \"Title\":\"USA\"\n"
+				+ "      },\n"
+				+ "      {\n"
+				+ "         \"id\":89,\n"
+				+ "         \"Title\":\"England\"\n"
+				+ "      }\n"
+				+ "   ]\n"
+				+ "}";
+		
+		JSONArray arr = null;
+		
+		try {
+			JSONObject obj = new JSONObject(response);
+			arr = obj.getJSONArray("links");
+			System.out.println(arr);
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		for (int i = 0; i < arr.length(); i++)
+			
+			try {
+				JSONObject valor = arr.getJSONObject(i);
+				
+				System.out.println(valor.get("Title"));
+				System.out.println(valor.get("id"));
+				System.out.println(valor);
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+		
 	}
 
 	@Given("some other precondition")

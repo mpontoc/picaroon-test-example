@@ -42,6 +42,21 @@
 			"udid": "emulator-5554",
 			"deviceName": "emulator-5554"
 		}
+	},
+		{
+		"name": "CT_Appium_Samsung",
+		"caps": {
+			"platformName": "Android",
+			"platformVersion": "8.0",
+			"automationName": "uiautomator2",
+			"appName": "CTappium",
+			"appActivity": "com.ctappium.MainActivity",
+			"appPackage": "com.ctappium",
+			"autoGrantPermissions": "true",
+			"noReset": "false",
+			"udid": "ce0217129433e71804",
+			"deviceName": "samsung s8"
+		}
 	}
 ]
 

@@ -1,14 +1,14 @@
 package com.example.demo.steps;
 
-import static br.com.mpontoc.picaroon.core.commands.ActionsCommands.waitExistClick;
-import static br.com.mpontoc.picaroon.core.commands.ActionsCommands.waitExistGetText;
-import static br.com.mpontoc.picaroon.core.commands.ActionsCommands.waitExistSet;
-import static br.com.mpontoc.picaroon.core.commands.ActionsCommands.waitSeconds;
+import static io.github.mpontoc.picaroon.core.commands.ActionsCommands.waitExistClick;
+import static io.github.mpontoc.picaroon.core.commands.ActionsCommands.waitExistGetText;
+import static io.github.mpontoc.picaroon.core.commands.ActionsCommands.waitExistSet;
+import static io.github.mpontoc.picaroon.core.commands.ActionsCommands.waitSeconds;
 
 import org.junit.Assert;
 
-import br.com.mpontoc.picaroon.core.commands.ActionsCommands;
-import br.com.mpontoc.picaroon.core.commands.MobileCommands;
+import io.github.mpontoc.picaroon.core.commands.ActionsCommands;
+import io.github.mpontoc.picaroon.core.commands.MobileCommands;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;

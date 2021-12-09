@@ -3,10 +3,10 @@ package com.example.demo.runner;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
-import br.com.mpontoc.picaroon.core.mobile.Mobile;
-import br.com.mpontoc.picaroon.core.utils.BaseTest;
-import br.com.mpontoc.picaroon.core.utils.Functions;
-import br.com.mpontoc.picaroon.core.utils.Prop;
+import io.github.mpontoc.picaroon.core.mobile.Mobile;
+import io.github.mpontoc.picaroon.core.utils.BaseTest;
+import io.github.mpontoc.picaroon.core.utils.Functions;
+import io.github.mpontoc.picaroon.core.utils.Prop;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
@@ -14,9 +14,10 @@ import io.cucumber.junit.CucumberOptions;
 
 @CucumberOptions(
 
-		tags = { " @testAppium " }, features = "src/test/resources/features", // local onde estão as features
+		tags = { " @android " }, 
+		features = "src/test/resources/features", // local onde estão as features
 		glue = { "com.example.demo.steps", // package onde estão os steps
-				"com.example.demo.conf" // chamada do spring
+				"com.example.demo.config" // chamada do spring
 		}, plugin = { "pretty", // imprime a descrição da feature
 				"json:target/reports/results.json", "html:target/cucumber-reports/runner_Android",
 				"rerun:target/rerun_Android.txt" }, monochrome = true, // deixa o console só com fonte cor preta
@@ -35,10 +36,10 @@ public class Android_Runner extends BaseTest {
 	public static void setUp() {
 		Functions.apagaLog4j();
 		Functions.setAppRunner(true);
-		Prop.setPropAndSave("browserOrDevice", "mobile");
+		Prop.setPropAndSave("browserOrMobile", "mobile");
 		Mobile.setPlataforma("android");
 		Mobile.setCapsFileJson("capsAndroid.json");
-		Mobile.setCapsNameDeviceOrApp("CT_Appium");;
+		Mobile.setCapsNameDeviceOrApp("CT_Appium_Samsung");;
 		Functions.setPathReport("runner_Android");
 		Functions.setDescricaoReport("Test Android");
 		Functions.setupExecution();

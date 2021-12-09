@@ -1,9 +1,9 @@
 package com.example.demo.steps;
 
-import static br.com.mpontoc.picaroon.core.drivers.DriverFactory.driver;
+import static io.github.mpontoc.picaroon.core.drivers.DriverFactory.driver;
 
-import br.com.mpontoc.picaroon.core.commands.ActionsCommands;
-import br.com.mpontoc.picaroon.core.utils.Log;
+import io.github.mpontoc.picaroon.core.utils.Log;
+import io.github.mpontoc.picaroon.core.utils.Report;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
@@ -42,7 +42,7 @@ public class ExampleBrowser_Steps {
 	@Quando("serão apresentadas informações do dia")
 	public void serão_apresentadas_informações_do_dia() {
 		
-		ActionsCommands.cucumberWriteReport(driver.getTitle());
+		Report.printReportSlyled(driver.getTitle());
 		
 	}
 
