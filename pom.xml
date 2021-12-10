@@ -34,7 +34,7 @@
 		</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>${project.encondig}
 		</project.reporting.outputEncoding>
-		<picaroon.version>4.1.0</picaroon.version>
+		<picaroon.version>4.1.2</picaroon.version>
 	</properties>
 	<dependencies>
 		<!-- Spring Boot Framework -->
