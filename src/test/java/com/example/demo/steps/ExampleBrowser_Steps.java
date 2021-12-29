@@ -2,6 +2,8 @@ package com.example.demo.steps;
 
 import static io.github.mpontoc.picaroon.core.drivers.DriverFactory.driver;
 
+import org.junit.Assert;
+
 import io.github.mpontoc.picaroon.core.commands.ActionsCommands;
 import io.github.mpontoc.picaroon.core.utils.Log;
 import io.github.mpontoc.picaroon.core.utils.Report;
@@ -39,6 +41,7 @@ public class ExampleBrowser_Steps {
 		driver.get(site);
 		
 		Log.log("\n Ex: \n" + "lib/webdriver/linux/chromedriver for linux \n or \n" + "lib/webdriver/linux/chromedriver.exe for windows" );
+		
 		
 	}
 
