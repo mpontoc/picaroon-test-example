@@ -2,37 +2,15 @@ package com.example.demo.steps;
 
 import static io.github.mpontoc.picaroon.core.drivers.DriverFactory.driver;
 
-import org.junit.Assert;
-
-import io.github.mpontoc.picaroon.core.commands.ActionsCommands;
-import io.github.mpontoc.picaroon.core.utils.Log;
-import io.github.mpontoc.picaroon.core.utils.Report;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
+import io.github.mpontoc.picaroon.core.commands.ActionsCommands;
+import io.github.mpontoc.picaroon.core.utils.Log;
+import io.github.mpontoc.picaroon.core.utils.Report;
 
 public class ExampleBrowser_Steps {
 
-/*
-	@BeforeStep("@browser")
-	public void reportClear(Scenario scenario) {
-		ActionsCommands.isFirstRun = true;
-		ActionsCommands.setScenario(scenario);
-	}
-
-	@AfterStep("@browser")
-	public void report(Scenario scenario) {
-		ActionsCommands.printScreenAfterStep(scenario);
-	}
-
-	@After
-	public static void printTimeExecution() {
-		if (Prop.getProp("printAfterSteps").equals("false")) {
-			ActionsCommands.printScreen();
-		}
-		Functions.printTimeExecution();
-	}
-*/
 	@Dado("que eu acesse o site {string}")
 	public void que_eu_acesse_o_site(String site) {
 		
@@ -53,7 +31,15 @@ public class ExampleBrowser_Steps {
 		
 		String[] linkEsport = { "Esporte" , "logEsporte" };
 		
-		ActionsCommands.waitExistClick(linkEsport, 3);
+		String[] texto = {"title__element headlineMain__title" , "texto pego"};
+		
+		ActionsCommands.waitExistGetText(texto, 3);
+		
+//		ActionsCommands.waitExistClick("Esporte", 3);
+		
+		ActionsCommands.waitExist(linkEsport, 3 , true);
+		
+//		ActionsCommands.waitExistClick(linkEsport, 3);
 		
 		ActionsCommands.waitSeconds(3);
 	}

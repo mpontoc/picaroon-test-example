@@ -1,36 +1,38 @@
 package com.example.demo.config;
 
-import io.github.mpontoc.picaroon.core.commands.ActionsCommands;
-import io.github.mpontoc.picaroon.core.drivers.DriverFactory;
-import io.github.mpontoc.picaroon.core.utils.Functions;
-import io.github.mpontoc.picaroon.core.utils.Prop;
-import io.github.mpontoc.picaroon.core.utils.Report;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeStep;
 import io.cucumber.java.Scenario;
+import io.github.mpontoc.picaroon.core.commands.ActionsCommands;
+import io.github.mpontoc.picaroon.core.config.Execution;
+import io.github.mpontoc.picaroon.core.constants.PropertiesConstants;
+import io.github.mpontoc.picaroon.core.drivers.DriverFactory;
+import io.github.mpontoc.picaroon.core.utils.Functions;
+import io.github.mpontoc.picaroon.core.utils.Report;
 
 public class Hooks {
 
 	@Before
 	public void setAppMobile(Scenario scenario) {
-		
-		ActionsCommands.setScenario(scenario);
-		
-		if (ActionsCommands.getPrintedInfo() == false) {
-			Functions.printInfoExec();
-		}
 
+		ActionsCommands.setScenario(scenario);
+		if (PropertiesConstants.BROWSER_OR_MOBILE.contains("mobile")) {
+
+			if (Execution.getAppRunner() == true) {
+				DriverFactory.newApp();
+			}
+		}
 	}
 
 	@BeforeStep
 	public void reportBeforeStep(Scenario scenario) {
 
 		ActionsCommands.setScenario(scenario);
-		ActionsCommands.isFirstRun = true;
-
-		if (ActionsCommands.getPrintedInfo() == false) {
+		Execution.setIsFirstRun(true);
+		
+		if (ActionsCommands.getPrintedInfo() == null) {
 			Functions.printInfoExec();
 		}
 	}
@@ -46,14 +48,14 @@ public class Hooks {
 	@After
 	public static void printTimeExecution() {
 
-		if (Prop.getProp("printAfterSteps").equals("false")) {
+		if (PropertiesConstants.PRINT_AFTER_STEPS.equals("false")) {
 			Report.printScreen();
 		}
 		Functions.printTimeExecution();
-		Functions.setHoraFinalTotal(Functions.retornaData().substring(11));
-		Report.cucumberWriteReport("Total execution time until 'moment/final' "
-				+ Functions.substractHours(Functions.getHoraInicialTotal(), Functions.getHoraFinalTotal()));
-		ActionsCommands.setPrintedInfo(false);
+		Execution.setHoraFinalTotal(Functions.retornaData().substring(11));
+		Report.cucumberWriteReport("Total execution time until 'moment/final'"
+				+ Functions.substractHours(Execution.getHoraInicialTotal(), Execution.getHoraFinalTotal()));
+		ActionsCommands.setPrintedInfo(null);
 	}
 
 }

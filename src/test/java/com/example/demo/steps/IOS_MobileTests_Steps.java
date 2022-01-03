@@ -5,11 +5,11 @@ import org.springframework.beans.factory.annotation.Value;
 
 import com.example.demo.User;
 
+import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.Entao;
 import io.github.mpontoc.picaroon.core.commands.ActionsCommands;
 import io.github.mpontoc.picaroon.core.drivers.DriverFactory;
 import io.github.mpontoc.picaroon.core.utils.Log;
-import io.cucumber.java.pt.Dado;
-import io.cucumber.java.pt.Entao;
 
 public class IOS_MobileTests_Steps {
 	

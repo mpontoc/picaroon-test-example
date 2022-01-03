@@ -3,12 +3,13 @@ package com.example.demo.runner;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import io.github.mpontoc.picaroon.core.config.Execution;
 import io.github.mpontoc.picaroon.core.mobile.Mobile;
 import io.github.mpontoc.picaroon.core.utils.BaseTest;
 import io.github.mpontoc.picaroon.core.utils.Functions;
 import io.github.mpontoc.picaroon.core.utils.Prop;
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
 
 
 @RunWith(Cucumber.class)
@@ -36,7 +37,8 @@ public class IOS_Runner extends BaseTest {
 	@BeforeClass
 	
 	public static void setUp() {
-		Functions.setAppRunner(true);
+		Execution.setAppRunner(true);
+		System.out.println("GetAppRunner está como " + Execution.getAppRunner());
 		Prop.setPropAndSave("browserOrMobile", "mobile");
 		Mobile.setPlataforma("ios");
 		Mobile.setCapsFileJson("capsIOS.json");

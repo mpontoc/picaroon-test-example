@@ -3,12 +3,13 @@ package com.example.demo.runner;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import io.github.mpontoc.picaroon.core.config.Execution;
 import io.github.mpontoc.picaroon.core.mobile.Mobile;
 import io.github.mpontoc.picaroon.core.utils.BaseTest;
 import io.github.mpontoc.picaroon.core.utils.Functions;
 import io.github.mpontoc.picaroon.core.utils.Prop;
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 
@@ -35,7 +36,7 @@ public class Android_Runner extends BaseTest {
 	@BeforeClass
 	public static void setUp() {
 		Functions.apagaLog4j();
-		Functions.setAppRunner(true);
+		Execution.setAppRunner(true);
 		Prop.setPropAndSave("browserOrMobile", "mobile");
 		Mobile.setPlataforma("android");
 		Mobile.setCapsFileJson("capsAndroid.json");

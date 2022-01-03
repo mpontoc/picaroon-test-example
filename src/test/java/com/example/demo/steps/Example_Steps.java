@@ -4,19 +4,19 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import io.github.mpontoc.picaroon.core.commands.ActionsCommands;
-import io.github.mpontoc.picaroon.core.utils.Functions;
 import io.cucumber.java.BeforeStep;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.mpontoc.picaroon.core.commands.ActionsCommands;
+import io.github.mpontoc.picaroon.core.utils.Functions;
 
 public class Example_Steps {
 	
 	@BeforeStep("@tag")
 	public void reportClear(Scenario scenario) {
-		ActionsCommands.isFirstRun = true;
+//		ActionsCommands.isFirstRun = true;
 		ActionsCommands.setScenario(scenario);
 	}
 

@@ -7,11 +7,10 @@ import static io.github.mpontoc.picaroon.core.commands.ActionsCommands.waitSecon
 
 import org.junit.Assert;
 
-import io.github.mpontoc.picaroon.core.commands.ActionsCommands;
-import io.github.mpontoc.picaroon.core.commands.MobileCommands;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
+import io.github.mpontoc.picaroon.core.commands.ActionsCommands;
 
 public class MobileTests_Steps {
 
