@@ -8,6 +8,7 @@ import com.example.demo.User;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
 import io.github.mpontoc.picaroon.core.commands.ActionsCommands;
+import io.github.mpontoc.picaroon.core.commands.MobileCommands;
 import io.github.mpontoc.picaroon.core.drivers.DriverFactory;
 import io.github.mpontoc.picaroon.core.utils.Log;
 
@@ -28,7 +29,7 @@ public class IOS_MobileTests_Steps {
 		user.setName("Teste");	
 		System.out.println(user.getName());
 		
-//		DriverFactory.newApp();		
+		MobileCommands.refreshScreen();
 		
 	}
 
@@ -39,7 +40,7 @@ public class IOS_MobileTests_Steps {
 		
 		ActionsCommands.waitExistClick( testPosicao, 3);
 
-		ActionsCommands.waitExistGetText("MpontoC", 3 , true);
+		ActionsCommands.waitExistGetText("MpontoCff", 3 , true);
 		
 		DriverFactory.iosDriver.getKeyboard();
 

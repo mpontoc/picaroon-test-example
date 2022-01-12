@@ -5,9 +5,9 @@ import org.junit.runner.RunWith;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
-import io.github.mpontoc.picaroon.core.config.Execution;
+import io.github.mpontoc.picaroon.core.execution.ControlExecution;
+import io.github.mpontoc.picaroon.core.execution.Execution;
 import io.github.mpontoc.picaroon.core.mobile.Mobile;
-import io.github.mpontoc.picaroon.core.utils.BaseTest;
 import io.github.mpontoc.picaroon.core.utils.Functions;
 import io.github.mpontoc.picaroon.core.utils.Prop;
 
@@ -26,7 +26,7 @@ import io.github.mpontoc.picaroon.core.utils.Prop;
 		strict = true // quando está true ele falha o cenario inteiro caso estja faltando algum step
 )
 
-public class Android_Runner extends BaseTest {
+public class Android_Runner extends ControlExecution {
 
 	/*
 	 * case start the app by runner may set app on Mobile.setCapsNameDeviceOrApp

@@ -6,11 +6,11 @@ import io.cucumber.java.Before;
 import io.cucumber.java.BeforeStep;
 import io.cucumber.java.Scenario;
 import io.github.mpontoc.picaroon.core.commands.ActionsCommands;
-import io.github.mpontoc.picaroon.core.config.Execution;
-import io.github.mpontoc.picaroon.core.constants.PropertiesConstants;
 import io.github.mpontoc.picaroon.core.drivers.DriverFactory;
+import io.github.mpontoc.picaroon.core.execution.Execution;
+import io.github.mpontoc.picaroon.core.execution.report.Report;
 import io.github.mpontoc.picaroon.core.utils.Functions;
-import io.github.mpontoc.picaroon.core.utils.Report;
+import io.github.mpontoc.picaroon.core.utils.PropertiesVariables;
 
 public class Hooks {
 
@@ -18,7 +18,7 @@ public class Hooks {
 	public void setAppMobile(Scenario scenario) {
 
 		ActionsCommands.setScenario(scenario);
-		if (PropertiesConstants.BROWSER_OR_MOBILE.contains("mobile")) {
+		if (PropertiesVariables.BROWSER_OR_MOBILE.contains("mobile")) {
 
 			if (Execution.getAppRunner() == true) {
 				DriverFactory.newApp();
@@ -31,7 +31,7 @@ public class Hooks {
 
 		ActionsCommands.setScenario(scenario);
 		Execution.setIsFirstRun(true);
-		
+
 		if (ActionsCommands.getPrintedInfo() == null) {
 			Functions.printInfoExec();
 		}
@@ -48,7 +48,7 @@ public class Hooks {
 	@After
 	public static void printTimeExecution() {
 
-		if (PropertiesConstants.PRINT_AFTER_STEPS.equals("false")) {
+		if (PropertiesVariables.PRINT_AFTER_STEPS.equals("false")) {
 			Report.printScreen();
 		}
 		Functions.printTimeExecution();
@@ -57,5 +57,4 @@ public class Hooks {
 				+ Functions.substractHours(Execution.getHoraInicialTotal(), Execution.getHoraFinalTotal()));
 		ActionsCommands.setPrintedInfo(null);
 	}
-
 }

@@ -5,7 +5,7 @@ import org.junit.runner.RunWith;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
-import io.github.mpontoc.picaroon.core.utils.BaseTest;
+import io.github.mpontoc.picaroon.core.execution.ControlExecution;
 import io.github.mpontoc.picaroon.core.utils.Functions;
 import io.github.mpontoc.picaroon.core.utils.Prop;
 
@@ -29,12 +29,12 @@ import io.github.mpontoc.picaroon.core.utils.Prop;
 		strict = true // quando está true ele falha o cenario inteiro caso estja faltando algum step
 )
 
-public class Browser_Runner extends BaseTest {
+public class Browser_Runner extends ControlExecution {
 	
 	@BeforeClass
 	
 	public static void setUp() {
-		Prop.setPropAndSave("browserOrMobile", "chrome");
+		Prop.setPropAndSave("browserOrMobile", "firefox");
 		Functions.setPathReport("runner");
 		Functions.setDescricaoReport("Test Browser");
 		Functions.setupExecution();
