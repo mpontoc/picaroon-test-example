@@ -30,6 +30,7 @@ public class IOS_MobileTests_Steps {
 		System.out.println(user.getName());
 		
 		MobileCommands.refreshScreen();
+		MobileCommands.changeContextNativeOrWebview("webview");
 		
 	}
 

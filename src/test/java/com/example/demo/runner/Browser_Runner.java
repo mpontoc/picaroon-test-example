@@ -32,9 +32,8 @@ import io.github.mpontoc.picaroon.core.utils.Prop;
 public class Browser_Runner extends ControlExecution {
 	
 	@BeforeClass
-	
 	public static void setUp() {
-		Prop.setPropAndSave("browserOrMobile", "firefox");
+		Prop.setPropAndSave("browserOrMobile", "chrome");
 		Functions.setPathReport("runner");
 		Functions.setDescricaoReport("Test Browser");
 		Functions.setupExecution();
