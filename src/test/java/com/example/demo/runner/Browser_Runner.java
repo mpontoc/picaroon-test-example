@@ -33,7 +33,7 @@ public class Browser_Runner extends ControlExecution {
 	
 	@BeforeClass
 	public static void setUp() {
-		Prop.setPropAndSave("browserOrMobile", "chrome");
+		Prop.setPropAndSave("browserOrMobile", "firefox");
 		Functions.setPathReport("runner");
 		Functions.setDescricaoReport("Test Browser");
 		Functions.setupExecution();

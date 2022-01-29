@@ -1,5 +1,7 @@
 package com.example.demo.steps;
 
+import static io.github.mpontoc.picaroon.core.elements.ElementFunctions.POSITION_ELEMENT;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
@@ -28,6 +30,11 @@ public class IOS_MobileTests_Steps {
 		
 		user.setName("Teste");	
 		System.out.println(user.getName());
+		
+		
+		String[] variavel = {"a", "b"};
+		
+		MobileCommands.scrollDownUntilElement(variavel[POSITION_ELEMENT]);
 		
 		MobileCommands.refreshScreen();
 		MobileCommands.changeContextNativeOrWebview("webview");
